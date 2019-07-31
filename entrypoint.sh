@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 if [[ -n "$USERNAME" ]] && [[ -n "$PASSWORD" ]]
 then

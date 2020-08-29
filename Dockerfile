@@ -9,6 +9,6 @@ VOLUME /srv
 EXPOSE 80
 COPY webdav.conf /etc/nginx/conf.d/default.conf
 
-COPY entrypoint.sh /
-RUN chmod +x entrypoint.sh
-CMD /entrypoint.sh && nginx -g "daemon off;"
+COPY entrypoint.sh /docker-entrypoint.d
+RUN chmod +x /docker-entrypoint.d/entrypoint.sh
+CMD ["nginx", "-g", "daemon off;"]
